@@ -15,7 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-	AdminServiceImpl adminService = new AdminServiceImpl();
+	@Autowired
+	AdminServiceImpl adminService;
 
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerAdmin(@RequestBody Admin admin){

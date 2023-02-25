@@ -5,11 +5,12 @@ import javax.persistence.*;
 @Entity
 public class TripBooking{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int tripBookingId;
     private String fromLocation;
     private String toLocation;
     private int distanceInKm;
+    @Enumerated(value = EnumType.STRING)
     private TripStatus status;
     private int bill;
 
